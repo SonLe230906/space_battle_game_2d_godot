@@ -29,7 +29,7 @@ var player_loaded_data = {
 	"highest_score" : 0,
 	"coins": 0,
 	"fire_rate" : 0.275,
-	"bullet_damage" : 20,
+	"bullet_damage" : 15,
 	"crit_rate" : 0,
 	"crit_damage": 1,
 	"speed" : 500,
@@ -118,10 +118,6 @@ func new_game() -> void:
 	$Soundtrack_1.stop()
 	$Soundtrack_2.play()
 	$Credit.hide()
-	#is_waiting = true
-	#$DelayBossSpawn.start()
-	#$EnemySpawn.stop()
-
 	enemy_escape = 0
 	wave_count = 1
 	enemy_remaining = 2
@@ -142,7 +138,7 @@ func _read_file(path : String):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if (settings_data != null):
-		current_stat_multiplier = power_difficulty[settings_data["difficulty"]] * pow(1.2, int(wave_count) / int(10))
+		current_stat_multiplier = power_difficulty[settings_data["difficulty"]] * pow(1.05, int(wave_count) / int(10))
 	if (player != null):
 		$NumberOfCoins.text = str(int(player.player_data["coins"]))
 	else:
@@ -191,6 +187,8 @@ func _process(delta: float) -> void:
 					add_child(coin)
 				$BossName.hide()
 				$BossHealthBar.hide()
+			$ExplodeEffect.position = enemy.position
+			$ExplodeEffect.emitting = true
 			var name_collectable = ""
 			var random_number = randf_range(0, 100)
 			for i in range(0,5):
@@ -231,8 +229,13 @@ func _process(delta: float) -> void:
 				player.add_child(_show_indicator(collected, "+ ", "g", Color.YELLOW)) 
 				$CoinSound.play()
 			elif collectable.animation_name == "hp_collectable":
-				player.current_HP += 15
-				player.add_child(_show_indicator(15, "+ ", "", Color.GREEN))
+				var hp_added = 0
+				if (player.current_HP + 15 > player.player_data["MAX_HP"]):
+					hp_added = player.player_data["MAX_HP"] - player.current_HP
+				else:
+					hp_added = 15
+				player.current_HP += hp_added
+				player.add_child(_show_indicator(hp_added, "+ ", "", Color.GREEN))
 				$BuffSound.play()
 			elif collectable.animation_name == "fire_rate_collectable":
 				player.player_data["fire_rate"] *= 0.2
@@ -348,11 +351,10 @@ func game_over() -> void:
 	enemy_escape = 0
 	get_tree().call_group("player", "queue_free")
 	get_tree().call_group("enemy", "queue_free")
-	get_tree().call_group("item_collectable", "queue_free")
 	get_tree().call_group("player_bullet", "queue_free")
 	get_tree().call_group("enemies_bullet", "queue_free")
-	get_tree().call_group("effect", "queue_free")
-	
+	get_tree().call_group("item_collectable", "queue_free")
+	get_tree().call_group("collectable_effect", "queue_free")
 func _on_show_title_timeout() -> void:
 	$GameOver.hide()
 	$GameTitle.show()
@@ -446,8 +448,7 @@ func _show_indicator(number : float, text : String, text_2 : String, color : Col
 	if (settings_data["indicator_enabled"] == true):
 		var an_indicator = indicator.instantiate()
 		an_indicator.label_name = text
-		if (number != 0):
-			an_indicator.label_name += str(int(number)) 
+		an_indicator.label_name += str(int(number)) 
 		an_indicator.label_name += text_2
 		an_indicator.color_name = color
 		return an_indicator

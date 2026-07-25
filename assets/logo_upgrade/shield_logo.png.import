@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxmtmm12uwrx7"
-path="res://.godot/imported/sprite_1.png-e08dbd634931a865517ab05238e7c693.ctex"
+uid="uid://dm1h6k0df1kxp"
+path="res://.godot/imported/shield_logo.png-57be509450de0ed93aec58fde2736ab9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/health-bar/sprite_1.png"
-dest_files=["res://.godot/imported/sprite_1.png-e08dbd634931a865517ab05238e7c693.ctex"]
+source_file="res://assets/logo_upgrade/shield_logo.png"
+dest_files=["res://.godot/imported/shield_logo.png-57be509450de0ed93aec58fde2736ab9.ctex"]
 
 [params]
 

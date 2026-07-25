@@ -1,10 +1,10 @@
 extends Base_Enemy
 
 func _ready() -> void:
-	MAX_HP = 225
+	MAX_HP = 175
 	current_HP = MAX_HP
-	speed =  40.0
-	fire_rate = 1.15
+	speed = 40.0
+	fire_rate = 0.95
 	damage = 25
 	_adjust_power()
 	_on_enemy_fire_rate_timeout()

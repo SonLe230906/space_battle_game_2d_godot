@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bgenidodmed8" path="res://scripts/effect.gd" id="1_emrr1"]
 [ext_resource type="Texture2D" uid="uid://c28c7og2f15as" path="res://assets/logo_upgrade/debuff_1.png" id="2_1bydw"]
 [ext_resource type="Texture2D" uid="uid://bl5sdx1a8qs2c" path="res://assets/logo_upgrade/bullet_buff.png" id="3_u3ras"]
-[ext_resource type="Texture2D" uid="uid://c2glvtnxpsfdk" path="res://assets/logo_upgrade/shield.png" id="4_84v0c"]
+[ext_resource type="Texture2D" uid="uid://dm1h6k0df1kxp" path="res://assets/logo_upgrade/shield_logo.png" id="4_emrr1"]
 [ext_resource type="Texture2D" uid="uid://di0tujy1hlq7i" path="res://assets/logo_upgrade/speed.png" id="5_dgiot"]
 [ext_resource type="Texture2D" uid="uid://d4fbbfqxr4yme" path="res://assets/logo_upgrade/effect_border.png" id="6_4cy61"]
 [ext_resource type="FontFile" uid="uid://drp7tgfkv880r" path="res://assets/font/Press_Start_2P/PressStart2P-Regular.ttf" id="7_7id66"]
@@ -28,7 +28,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_84v0c")
+"texture": ExtResource("4_emrr1")
 }],
 "loop": 1,
 "name": &"resistance",
@@ -60,7 +60,7 @@ script = ExtResource("1_emrr1")
 [node name="EffectSprite" type="AnimatedSprite2D" parent="." unique_id=277513149]
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_8sm75")
-animation = &"debuff"
+animation = &"resistance"
 
 [node name="Border" type="AnimatedSprite2D" parent="." unique_id=491958808]
 position = Vector2(0, -3)

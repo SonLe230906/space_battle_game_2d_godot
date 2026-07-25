@@ -58,11 +58,12 @@ func _on_area_entered(area: Area2D) -> void:
 			area.queue_free()
 		$Damaged_1.play()
 	if area.is_in_group("enemy"):
-		damage_dealt = area.damage * 2
+		damage_dealt = area.damage
 		damage_dealt -= damage_dealt * player_data["resistance"]
 		current_HP -= damage_dealt
 		_show_indicator(damage_dealt, "- ", Color.RED)
 		$Damaged_1.play()
+	
 func _show_indicator(number : float, text : String, color : Color) -> void:
 	if (get_tree().get_first_node_in_group("main").settings_data["indicator_enabled"] == true):
 		var new_indicator = indicator.instantiate()

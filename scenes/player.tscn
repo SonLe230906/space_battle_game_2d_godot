@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ckxeceidgomat" path="res://assets/plane/plane-4.png" id="6_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://b8gx43a3ahto5" path="res://assets/plane/plane-3.png" id="7_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://c7sqdnfob4a8i" path="res://assets/plane/plane-5.png" id="8_fulsm"]
-[ext_resource type="Texture2D" uid="uid://by15umqsya63q" path="res://assets/health-bar/sprite_0.png" id="9_4r5pv"]
-[ext_resource type="Texture2D" uid="uid://cxmtmm12uwrx7" path="res://assets/health-bar/sprite_1.png" id="10_60mlk"]
+[ext_resource type="Texture2D" uid="uid://by15umqsya63q" path="res://assets/health_bar/sprite_0.png" id="9_4r5pv"]
+[ext_resource type="Texture2D" uid="uid://cxmtmm12uwrx7" path="res://assets/health_bar/sprite_1.png" id="10_60mlk"]
 [ext_resource type="AudioStream" uid="uid://cxjw5l55d4i5a" path="res://assets/audio/damaged_1.wav" id="11_i4ail"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gqh8t"]

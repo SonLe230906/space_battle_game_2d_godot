@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bqs6kgyxco2nh" path="res://assets/laze_enemy/laze_enemy_3.png" id="6_uyk0m"]
 [ext_resource type="Texture2D" uid="uid://dusgpi74cpon8" path="res://assets/laze_enemy/laze_enemy_4.png" id="7_6yryv"]
 [ext_resource type="Texture2D" uid="uid://c20kadl2y51dn" path="res://assets/laze_enemy/laze_enemy_5.png" id="8_obqaj"]
-[ext_resource type="Texture2D" uid="uid://by15umqsya63q" path="res://assets/health-bar/sprite_0.png" id="9_b3qoo"]
-[ext_resource type="Texture2D" uid="uid://cxmtmm12uwrx7" path="res://assets/health-bar/sprite_1.png" id="10_g2e1w"]
+[ext_resource type="Texture2D" uid="uid://by15umqsya63q" path="res://assets/health_bar/sprite_0.png" id="9_b3qoo"]
+[ext_resource type="Texture2D" uid="uid://cxmtmm12uwrx7" path="res://assets/health_bar/sprite_1.png" id="10_g2e1w"]
 [ext_resource type="AudioStream" uid="uid://crlh50g3ybb4u" path="res://assets/audio/damaged_2.wav" id="11_t72xo"]
 [ext_resource type="AudioStream" uid="uid://82bqlxewqso1" path="res://assets/audio/small_explosion.wav" id="12_mnc27"]
 

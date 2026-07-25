@@ -99,7 +99,8 @@ pause_menu = ExtResource("17_yaehf")
 settings_menu = ExtResource("12_4lmeg")
 indicator = ExtResource("7_074og")
 effect = ExtResource("8_ryguw")
-wave_count = 98
+wave_count = 150
+enemy_remaining = 99
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=376659282]
 position = Vector2(360, 539)
@@ -145,7 +146,7 @@ wait_time = 3.5
 
 [node name="Collectable" parent="." unique_id=1651058927 instance=ExtResource("4_w48qg")]
 z_index = 4096
-position = Vector2(41, 33)
+position = Vector2(41, 34)
 scale = Vector2(0.75, 0.75)
 
 [node name="AnnouncementLabel" type="Label" parent="." unique_id=910948745]
@@ -368,7 +369,19 @@ offset_right = 709.0
 offset_bottom = 1066.0
 theme_override_fonts/font = ExtResource("37_b1qrp")
 theme_override_font_sizes/font_size = 20
-text = "Made by Son Le - Version 1.0.1"
+text = "Made by Son Le - Version 1.0.2"
+
+[node name="ExplodeEffect" type="CPUParticles2D" parent="." unique_id=1954697841]
+emitting = false
+amount = 128
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.5
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 128.0
+initial_velocity_max = 128.0
+color = Color(1, 0.37254903, 0, 1)
 
 [connection signal="timeout" from="EnemySpawn" to="." method="_on_enemy_spawn_timeout"]
 [connection signal="timeout" from="ShowTitle" to="." method="_on_show_title_timeout"]
