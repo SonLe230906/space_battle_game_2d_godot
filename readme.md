@@ -3,7 +3,7 @@
 - Author: Son Le
 - Email: lemson06@gmail.com
 - This is my game project made with Godot Engine.
-- Current version: 1.0.2
+- Current version: 1.0.2.1
 
 # How to play
 - Move: W (up) A (left) S (down) D (right) or arrow keys.

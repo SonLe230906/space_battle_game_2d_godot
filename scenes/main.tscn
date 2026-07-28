@@ -363,13 +363,13 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_4lmeg")
 icon = ExtResource("18_getpj")
 
 [node name="Credit" type="Label" parent="." unique_id=429650290]
-offset_left = 419.0
+offset_left = 406.0
 offset_top = 1040.0
-offset_right = 709.0
+offset_right = 717.0
 offset_bottom = 1066.0
 theme_override_fonts/font = ExtResource("37_b1qrp")
 theme_override_font_sizes/font_size = 20
-text = "Made by Son Le - Version 1.0.2"
+text = "Made by Son Le - Version 1.0.2.1"
 
 [node name="ExplodeEffect" type="CPUParticles2D" parent="." unique_id=1954697841]
 emitting = false
